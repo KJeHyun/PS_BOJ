@@ -13,7 +13,7 @@ int main() {
 	fast_io;
 	int n, m;
 	cin >> n >> m;
-	set<int> a;
+	unordered_set<int> a;
 	int cnt = n + m;
 	int x;
 	for (int i = 0; i < n+m; i++) {
