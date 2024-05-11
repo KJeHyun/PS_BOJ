@@ -13,7 +13,8 @@ int main() {
 	fast_io;
 	int n;
 	cin >> n;
-	int m = INT_MAX, res = 0;
+	ll m = LLONG_MAX;
+	ll res = 0;
 	vector<int> d(n-1);
 	for (int i = 0; i < n - 1; i++) {
 		cin >> d[i];
@@ -21,7 +22,7 @@ int main() {
 	for (int i = 0; i < n - 1 ; i++) {
 		int p;
 		cin >> p;
-		m = min(m, p);
+		m = min(m, ll(p));
 		res += m * d[i];
 	}
 	cout << res;
