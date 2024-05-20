@@ -12,13 +12,13 @@ typedef tuple<ll, ll, ll> tlll;
 int A, B;
 vector<ll> table;
 vector<ll> eratos(int x) {
-	table.resize(x + 1);
+	table.assign(x + 1, 0);
 	vector<ll> prime;
-	for (ll i = 2; i <= B; i++) {
+	for (ll i = 2; i <= x; i++) {
 		if (table[i]) continue;
 		table[i] = i;
 		if (i <= B) prime.push_back(i);
-		for (ll j = i * i; j <= B; j += i) {
+		for (ll j = i * i; j <= x; j += i) {
 			if (table[j]) continue;
 			table[j] = i;
 		}
