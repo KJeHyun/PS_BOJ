@@ -14,11 +14,9 @@ int main() {
     int n;
     string s;
     cin >> n >> s;
-    unsigned long K = bitset<64>(s).to_ulong();
     int cnt = 0;
-    while (K != 0) {
-        K = K - (K & (~K + 1));
-        cnt++;
+    for (int i = 0; i < n; i++) {
+        if (s[i] - '0') cnt++;
     }
     cout << cnt;
 }
