@@ -9,10 +9,10 @@ typedef tuple<ll, ll, ll> tlll;
 #define xx first
 #define yy second
 
-const int r = 31, M = 1234567891;
+const ll r = 31, M = 1234567891;
 int main() {
     fast_io;
-    int n, ans = 0;
+    ll n, ans = 0;
     string s;
     cin >> n >> s;
     for (int i = 0; i < n; i++) {
