@@ -12,7 +12,7 @@ typedef tuple<ll, ll, ll> tlll;
 int main() {
     fast_io;
     vector<int> v;
-    int Q, c;
+    int Q;
     cin >> Q;
     while (Q--) {
         int c;
