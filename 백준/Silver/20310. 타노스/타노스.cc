@@ -17,5 +17,21 @@ int main() {
 		if (c == '0') z++;
 		else o++;
 	}
-	cout << string(z / 2, '0') << string(o / 2, '1');
+	z /= 2;
+	o /= 2;
+	for (int i = 0; i < s.length(); i++) {
+		if (o == 0) break;
+		if (s[i] == '1') {
+			s[i] = NULL;
+			o--;
+		}
+	}
+	for (int i = s.length() - 1; i >= 0; i--) {
+		if (z == 0) break;
+		if (s[i] == '0') {
+			s[i] = NULL;
+			z--;
+		}
+	}
+	for (char& c : s) if (c != NULL) cout << c;
 }
