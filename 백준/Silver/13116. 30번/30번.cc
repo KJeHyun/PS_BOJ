@@ -11,8 +11,8 @@ typedef tuple<ll, ll, ll> tlll;
 
 int p(int a, int b) {
 	while (a != b) {
-		if (a > b) a /= 2;
-		else b /= 2;
+		if (a > b) a >>= 1;
+		else b >>= 1;
 	}
 	return a;
 }
