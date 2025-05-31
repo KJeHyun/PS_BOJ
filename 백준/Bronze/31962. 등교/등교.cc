@@ -13,13 +13,13 @@ int main() {
     fast_io;
     int n, x;
     cin >> n >> x;
-    vector<pii> v;
+    vector<int> v;
     for (int i = 0; i < n; i++) {
         int s, t;
         cin >> s >> t;
-        if (s + t <= x) v.push_back({ s + t, s });
+        if (s + t <= x) v.push_back(s);
     }
     sort(v.begin(), v.end(), greater());
-    if (!v.empty()) cout << v[0].yy;
+    if (!v.empty()) cout << v[0];
     else cout << -1;
 }
